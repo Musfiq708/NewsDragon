@@ -5,3 +5,9 @@
 body{
   font-family: "Poppins", sans-serif;
 }
+
+a.active{
+  background-color: #E7E7E7;
+  color: black;
+  font-weight: 600 ;
+}
