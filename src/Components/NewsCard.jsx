@@ -1,5 +1,6 @@
 import { CiBookmark } from 'react-icons/ci';
 import { IoEye, IoShareSocialOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 export default function NewsCard({ news }) {
     const { name, published_date, img } = news.author;
@@ -26,10 +27,10 @@ export default function NewsCard({ news }) {
                 </div>
             </div>
             <div className='px-[20px] pt-[14px] border border-[#E7E7E7] rounded-b-[5px]'>
-                <h1 className='text-xl font-bold mb-[20px]'>{title}</h1>
+                <h1 className='text-xl font-bold mb-[20px]'>{title}</h1> 
                 <img className='mb-[32px]' src={image_url} alt="" />
                 <p className='line-clamp-4 font-normal text-[16px] text-[#706F6F]'>{details}</p>
-                <button className='mt-2 text-[16px] font-semibold text-[#F75B5F] hover:text-orange-300 mb-5 '>Read More</button>
+                <Link to={`/news/${news._id}`} className='mt-2 text-[16px] font-semibold text-[#F75B5F] hover:text-orange-300 mb-5 '>Read More</Link>
                 <div className='h-[1px] bg-[#E7E7E7] mb-5'></div>
                 <div className='flex mb-5 justify-between'>
                     <div className='flex items-center gap-[10px]'>
